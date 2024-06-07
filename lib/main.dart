@@ -17,7 +17,7 @@ class MiAplicacion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Dulcería Alegrías',
+      title: 'WitchFlowers',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -59,8 +59,7 @@ class PaginaSesion extends StatelessWidget {
         builder: (BuildContext context) {
           return AlertDialog(
             title: const Text('Error de inicio de sesión'),
-            content:
-                const Text('Credenciales incorrectas. Inténtalo de nuevo.'),
+            content: const Text('Incorrecto, inténtalo de nuevo.'),
             actions: <Widget>[
               TextButton(
                 child: const Text('Aceptar'),
@@ -134,8 +133,9 @@ class PaginaSesion extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Dulcería Alegrías'),
-        backgroundColor: const Color(0xffb80303),
+        title: const Text('WitchFlowers',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        backgroundColor: const Color(0xff74a994),
         elevation: 8,
       ),
       body: Padding(
@@ -143,7 +143,7 @@ class PaginaSesion extends StatelessWidget {
         child: Column(
           children: <Widget>[
             const Text(
-              "Inicio de sesión o registro",
+              "Inicio de sesión y registro",
               textAlign: TextAlign.center,
               style: TextStyle(
                 height: 2.5,
@@ -168,11 +168,14 @@ class PaginaSesion extends StatelessWidget {
             ElevatedButton(
               child: const Text(
                 'Iniciar sesión',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(340, 40),
-                backgroundColor: const Color(0xff000000),
+                backgroundColor: const Color(0xff689d6f),
               ),
               onPressed: () => _login(context),
             ),
@@ -180,11 +183,14 @@ class PaginaSesion extends StatelessWidget {
             ElevatedButton(
               child: const Text(
                 'Registrarse',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(340, 40),
-                backgroundColor: const Color(0xff000000),
+                backgroundColor: const Color(0xff57976c),
               ),
               onPressed: () => _registro(context),
             ),
@@ -212,8 +218,9 @@ class PaginaInicio extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Dulcería Alegrías'),
-        backgroundColor: const Color(0xffb80303),
+        title: const Text('WitchFlowers',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+        backgroundColor: const Color(0xff89c89e),
         elevation: 8,
       ),
       body: Center(
@@ -225,10 +232,11 @@ class PaginaInicio extends StatelessWidget {
             Text('Correo electrónico: $_email'),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              child: const Text('Cerrar sesión'),
+              child: const Text('Cerrar sesión',
+                  style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(340, 40),
-                backgroundColor: const Color(0xff000000),
+                backgroundColor: const Color(0xff96c39c),
               ),
               onPressed: () => _cerrarSesion(context),
             ),
